@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300&family=Murecho:wght@300&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Murecho', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #15B5B0
+
+    ;
+}
+
+.top,.middle {
+    width: 100%;
+    height: 50%;
+    
+}
+
+
+
+.top {
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottom {
+    width: 100%;
+    height: 10%;
+    background: #F9BDC0;
+
+    ;
+}
+
+section {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+}
+
+.left, .right {
+    height: 100%;
+    cursor: pointer;
+    width: 15%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    height: 100%;
+    width: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 300ms;
+    position: relative;
+}
+
+input[type='checkbox'] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+    background: red;
+}
+
+.left input[type='checkbox']:checked + .fa-arrow-left {
+    opacity: 0;
+}
+
+.right input[type='checkbox']:checked + .fa-arrow-right {
+    opacity: 0;
+}
+
+.left:hover,.right:hover {
+    background-color: #fbe5985b;
+    transition: 200ms;
+}
+
+
+
+.left:hover  .fa-arrow-left {
+    transform: scale(1.2);  
+    transition: 300ms;  
+}
+
+.right:hover  .fa-arrow-right {
+    transform: scale(1.2); 
+    transition: 300ms;  
+
+}
+
+section span {
+    position: absolute;
+    
+}
+
+.load {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    padding: 10px;
+    animation-name: pulse;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 200ms;
+    
+}
+
+@keyframes pulse {
+    from {transform:translate(-50%,-50%)  rotate(0deg);}
+    to {transform:translate(-50%,-50%)  rotate(360deg);}
+    
+
+
+}
+
+
+footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
